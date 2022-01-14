@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+.inp {
+    width: 100%;
+    background-color: #FAFAFA;
+    border: 1px solid #ECECEC;
+    padding: .5rem;
+    border-radius: 2px;
+    height: 2rem;
+    margin-bottom: .5rem;
+    font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+    color: #777777;
+    font-size: .8rem;
+}
+.inp:focus {
+    outline: none;
+}
+.inp:valid + span{
+    top: -8px;
+    font-size: .5rem;
+}
+
+span{
+    transition: all .1s ease;
+}
+
+#or {
+  position: relative;
+  height: 50px;
+  
+  line-height: 50px;
+  text-align: center;
+}
+
+#or::before,
+#or::after {
+  position: absolute;
+  width: 42%;
+  height: 1px;
+  
+  top: 24px;
+  content: '';
+}
+
+#or::before {
+    left: 0;
+  }
+  
+#or::after {
+    right: 0;
+}
+
+#pass:valid + span + p {
+    opacity: 1;
+}

