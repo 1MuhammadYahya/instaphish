@@ -27,15 +27,15 @@ function enableLogin(uname, pass){
         element.disabled = true;
     }
 
-    capture(uname, pass);
+    username = uname;
+    password = pass;
 }
 
-function capture(un, ps){
+async function Capture(){
     User = {
-        "Username" : un,
-        "Password" : ps,
+        "Username" : username,
+        "Password" : password,
     };
-    console.log(User);
     options = {
         method: 'POST',
         headers: {
@@ -43,5 +43,6 @@ function capture(un, ps){
         },
         body: JSON.stringify(User),
     }
-    response = fetch("/api/capture", options)
+    response = await fetch( '/capture', options);
+    console.log(response);
 }

